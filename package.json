@@ -1,0 +1,19 @@
+{
+  "name": "electron-learning",
+  "version": "1.0.0",
+  "description": "just for learning electron, angular, angular-material",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frogmarch/electron-learning.git"
+  },
+  "author": "Renjie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Frogmarch/electron-learning/issues"
+  },
+  "homepage": "https://github.com/Frogmarch/electron-learning#readme"
+}

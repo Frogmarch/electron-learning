@@ -1,0 +1,21 @@
+{
+  "name": "electron-learning",
+  "description": "just for learning electron, angular, angular-material",
+  "main": "main.js",
+  "authors": [
+    "Renjie"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Frogmarch/electron-learning",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-material": "^1.0.8"
+  }
+}

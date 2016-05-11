@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Todo</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" type="text/css" href="styles/app.css">
+  <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="../bower_components/angular-animate/angular-animate.js"></script>
+  <script type="text/javascript" src="../bower_components/angular-aria/angular-aria.js"></script>
+  <script type="text/javascript" src="../bower_components/angular-material/angular-material.js"></script>
+  <script type="text/javascript" src="scripts/index.js"></script>
+  <script type="text/javascript" src="scripts/app/todoController.js"></script>
+  <script type="text/javascript" src="scripts/app/config.js"></script>
+  <script type="text/javascript" src="scripts/components/todoList/todoListDirective.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="mainControl">
+  <md-content layout-padding>
+    <section layout="row" layout-sm="column" layout-align="start center" layout-wrap>
+      <md-button>{{title1}}</md-button>
+      <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
+      <md-button ng-disabled="true" class="md-primary">Disabled</md-button>
+      <md-button class="md-warn">{{title4}}</md-button>
+      <div class="label">Flat</div>
+    </section>
+
+    <section layout="row" layout-sm="column" layout-align="start center" layout-wrap>
+      <md-button class="md-raised">{{title1}}</md-button>
+      <md-button md-no-ink class="md-raised md-primary">Primary (md-noink)</md-button>
+      <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+      <md-button class="md-raised md-warn">{{title4}}</md-button>
+      <div class="label">Flat</div>
+    </section>
+
+    <section layout="row" layout-sm="column" layout-align="start center" layout-wrap>
+        <md-button class="md-fab" aria-label="Eat cake">
+            <md-icon>cake</md-icon>
+        </md-button>
+        <md-button class="md-fab md-primary" aria-label="Use Android">
+          <md-icon>android</md-icon>
+        </md-button>
+        <md-button class="md-fab" ng-disabled="true" aria-label="Comment">
+            <md-icon>comment</md-icon>
+        </md-button>
+        <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
+            <md-icon>people</md-icon>
+        </md-button>
+        <md-button class="md-fab md-mini" aria-label="Eat cake">
+            <md-icon>cake</md-icon>
+        </md-button>
+        <md-button class="md-fab md-mini md-primary" aria-label="Use Android">
+          <md-icon style="color: greenyellow;">android</md-icon>
+        </md-button>
+      <div class="label">FAB</div>
+    </section>
+  </md-content>
+
+
+  <md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="50" layout="column">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Large</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-lg card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with  image</span>
+            <span class="md-subhead">Extra Large</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content layout="row" layout-align="space-between">
+          <div class="md-media-xl card-media"></div>
+          <md-card-actions layout="column">
+            <md-button class="md-icon-button" aria-label="Favorite">
+              <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Settings">
+              <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Share">
+              <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            </md-button>
+          </md-card-actions>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div flex-xs flex-gt-xs="50" layout="column">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Small</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-sm card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Medium</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-md card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </md-content>
+</body>
+
+</html>
