@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Frogmarch/electron-learning/issues"
   },
-  "homepage": "https://github.com/Frogmarch/electron-learning#readme"
+  "homepage": "https://github.com/Frogmarch/electron-learning#readme",
+  "dependencies": {
+    "diskdb": "^0.1.14"
+  }
 }
