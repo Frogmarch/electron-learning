@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const ipcRenderer = require('electron').ipcRenderer;
 
 angular.module('todo.controllers', [])
@@ -13,17 +14,17 @@ angular.module('todo.controllers', [])
 		$timeout(function(){
 			$scope.todos.push(arg);
 		}, 0);
-	})
+	});
 	ipcRenderer.send('msg-findAll', {});
 
 	//
-	$scope.addOneTask = function(task){
-		alert("123");
-		if(task.trim()){
+	$scope.addOneTask = function(){
+		if($scope.task.trim()){
 			var _task = {
-				text: task.trim()
-			}
+				text: $scope.task.trim()
+			};
 			ipcRenderer.send('msg-addOne', _task);
 		}
-	}
-})
+		$scope.task = "";
+	};
+});

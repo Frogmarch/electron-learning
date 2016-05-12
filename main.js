@@ -30,5 +30,5 @@ ipcMain.on('msg-findAll', function(event){
 });
 
 ipcMain.on('msg-addOne', function(event, arg){
-  console.log(db.todos.save(arg));
+  event.sender.send('reply-addOne', db.todos.save(arg));
 })
