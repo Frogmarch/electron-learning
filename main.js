@@ -25,10 +25,21 @@ app.on('ready', function() {
   });
 });
 
-ipcMain.on('msg-findAll', function(event){
+ipcMain.on('msg-findAll', function(event) {
   event.sender.send('reply-findAll', db.todos.find());
 });
 
-ipcMain.on('msg-addOne', function(event, arg){
+ipcMain.on('msg-addOne', function(event, arg) {
   event.sender.send('reply-addOne', db.todos.save(arg));
+});
+
+ipcMain.on('msg-removeOne', function(event, arg) {
+  event.sender.send('reply-removeOne', function() {
+    db.todos.remove({ _id: arg }, false);
+    return db.todos.find();
+  });
+});
+
+ipcMain.on('msg-updateOne', function(event, arg){
+  db.todos.update({_id: arg._id}, arg, {multi: false, upsert: false});
 })
